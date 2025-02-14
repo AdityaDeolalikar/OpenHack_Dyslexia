@@ -15,7 +15,7 @@ const Page = () => {
               Making Reading & Writing Fun for Every Child!
             </h1>
             <p className='text-lg md:text-xl text-gray-700 mb-8 max-w-xl'>
-              Inspire your child's creativity and love for learning through our engaging educational platform.
+              Inspire your child&apos;s creativity and love for learning through our engaging educational platform.
             </p>
             <button className='bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105'>
               Get Started
@@ -59,7 +59,7 @@ const Page = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">What is Dyslexia?</h3>
               <p className="text-gray-600">
-                Dyslexia is a learning difference that primarily affects reading and writing abilities but doesn't impact general intelligence.
+                Dyslexia is a learning difference that primarily affects reading and writing abilities but doesnt impact general intelligence.
               </p>
             </div>
 
@@ -104,7 +104,7 @@ const Page = () => {
                   Every Child Learns Differently
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Dyslexia affects up to 20% of the population. We believe in embracing these differences and providing tools that work with, not against, your child's natural learning style.
+                  Dyslexia affects up to 20% of the population. We believe in embracing these differences and providing tools that work with, not against, your childs natural learning style.
                 </p>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
                   Learn More
