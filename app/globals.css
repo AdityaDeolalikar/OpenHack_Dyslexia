@@ -6,6 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --font-open-dyslexic: OpenDyslexic, sans-serif;
+  --navbar-height: 70px;
 }
 
 * {
@@ -18,3 +19,4 @@
     padding-top: 5rem; /* Increased padding to ensure content is below navbar */
   }
 }
+

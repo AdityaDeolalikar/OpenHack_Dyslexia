@@ -13,7 +13,8 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='fixed left-0 top-0 w-full z-50 ease-in duration-300 bg-white shadow-md'>
+    <nav className='fixed left-0 top-0 w-full z-50 ease-in duration-300 bg-white shadow-md h-[90px]' 
+         style={{ '--navbar-height': '70px' } as React.CSSProperties}>
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4'>
         <Link href='/' className="z-50">
           <h1 className='font-bold text-2xl cursor-pointer'>
