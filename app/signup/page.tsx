@@ -1,40 +1,18 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function SignUp() {
-  const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
   })
-  const [error, setError] = useState('')
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    try {
-      const response = await fetch('http://localhost:3001/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Something went wrong')
-      }
-
-      // After successful signup, redirect to login page
-      router.push('/login?message=Account created successfully! Please login.')
-    } catch (error: Error) {
-      setError(error.message)
-    }
+    alert('Signup functionality is currently disabled')
   }
 
   return (
@@ -44,11 +22,11 @@ export default function SignUp() {
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Create your account
           </h2>
+          <p className="mt-2 text-center text-sm text-gray-600">
+            Note: Signup is currently disabled
+          </p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          {error && (
-            <div className="text-red-500 text-center text-sm">{error}</div>
-          )}
           <div className="rounded-md shadow-sm space-y-4">
             <div>
               <label htmlFor="name" className="sr-only">
