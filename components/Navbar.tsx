@@ -6,32 +6,38 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   
+  console.log('Navbar component mounted')
+  
   const handleNav = () => {
     setNav(!nav)
   }
 
   return (
-    <nav className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-white shadow-md'>
+    <nav className='fixed left-0 top-0 w-full z-50 ease-in duration-300 bg-white shadow-md'>
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4'>
-        <Link href='/'>
+        <Link href='/' className="z-50">
           <h1 className='font-bold text-2xl cursor-pointer'>
             ReadWrite<span className='text-blue-600'>Fun</span>
           </h1>
         </Link>
         
         {/* Desktop Navigation */}
-        <ul className='hidden sm:flex'>
+        <ul className='hidden sm:flex items-center'>
           <li className='p-4 hover:text-blue-600 ease-in duration-200'>
             <Link href='/'>Home</Link>
           </li>
           <li className='p-4 hover:text-blue-600 ease-in duration-200'>
             <Link href='/about'>About</Link>
           </li>
-          <li className='p-4 hover:text-blue-600 ease-in duration-200'>
-            <Link href='/resources'>Resources</Link>
+          <li className='p-4'>
+            <Link href='/signup' className='bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 ease-in duration-200'>
+              Sign Up
+            </Link>
           </li>
-          <li className='p-4 hover:text-blue-600 ease-in duration-200'>
-            <Link href='/contact'>Contact</Link>
+          <li className='p-4'>
+            <Link href='/login' className='text-blue-600 border border-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 ease-in duration-200'>
+              Login
+            </Link>
           </li>
         </ul>
 
@@ -57,11 +63,15 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-blue-600 ease-in duration-200'>
               <Link href='/about'>About</Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-blue-600 ease-in duration-200'>
-              <Link href='/resources'>Resources</Link>
+            <li onClick={handleNav} className='p-4'>
+              <Link href='/signup' className='inline-block bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 ease-in duration-200'>
+                Sign Up
+              </Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-blue-600 ease-in duration-200'>
-              <Link href='/contact'>Contact</Link>
+            <li onClick={handleNav} className='p-4'>
+              <Link href='/login' className='inline-block text-blue-600 border border-blue-600 px-8 py-3 rounded-md hover:bg-blue-50 ease-in duration-200'>
+                Login
+              </Link>
             </li>
           </ul>
         </div>

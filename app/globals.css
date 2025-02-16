@@ -11,3 +11,10 @@
 * {
   font-family: var(--font-open-dyslexic);
 }
+
+@layer base {
+  body {
+    @apply bg-[#f1f1f1] text-gray-900 min-h-screen;
+    padding-top: 5rem; /* Increased padding to ensure content is below navbar */
+  }
+}
